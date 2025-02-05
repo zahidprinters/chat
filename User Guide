@@ -1,0 +1,98 @@
+Store Management System User Manual
+1. Introduction
+Welcome to the Store Management System for Sheikh Plastic Industries (SPI). This guide will help you navigate and use the system effectively to manage inventory, orders, and reporting.
+
+2. User Management
+Logging In
+Open the Store Management System application.
+
+Enter your username and password.
+
+Click on the "Login" button.
+
+If you have Multi-Factor Authentication (MFA) enabled, follow the prompts to verify your identity.
+
+Password Reset
+On the login page, click on "Forgot Password".
+
+Enter your registered email address.
+
+Check your email for the password reset link and follow the instructions.
+
+Role-Based Access Control
+Admin: Full access to all features and settings.
+
+Manager: Access to inventory management, order processing, and reporting.
+
+Staff: Limited access to inventory and order processing.
+
+Audit Logs and Security Alerts
+Access the audit logs from the Admin dashboard to monitor user activities.
+
+Security alerts will be sent via email or SMS for suspicious activities.
+
+3. Inventory Management
+Real-Time Stock Tracking
+View real-time stock levels on the inventory dashboard.
+
+Use unit of measurement (UoM) conversions (e.g., kg ↔ grams, liters ↔ milliliters).
+
+Low-Stock Alerts
+Set low-stock thresholds for each product.
+
+Receive alerts when stock levels fall below the threshold.
+
+Manual Product Search
+Use the search bar to manually search for products by name or category.
+
+Autocomplete feature helps you find products quickly.
+
+CSV Bulk Operations
+Import and export inventory data using CSV files.
+
+Use the "Import" button to upload CSV files and update inventory.
+
+4. Order Processing
+Creating Orders
+Navigate to the "Orders" section.
+
+Click on "Create Order".
+
+Fill in the customer details and select products.
+
+Click "Submit" to create the order.
+
+Order Status Tracking
+Track the status of orders (pending, completed) from the "Orders" dashboard.
+
+Notifications and Returns Management
+Receive email/SMS notifications for order updates.
+
+Manage product returns from the "Returns" section.
+
+5. Reporting
+Customizable Reports
+Generate customizable reports in CSV or PDF format.
+
+Select the desired report type and date range, then click "Generate Report".
+
+Real-Time Dashboards
+Access real-time dashboards for inventory, sales, and order analytics.
+
+Sales Analytics and Predictive Forecasting
+View sales analytics to understand trends and performance.
+
+Use predictive forecasting to make informed business decisions.
+
+6. Additional Features
+User Guides for UoM Management and Reporting
+Access detailed user guides for managing units of measurement and generating reports.
+
+Staff Training
+Conduct training sessions to familiarize staff with unit conversions and manual product search.
+
+7. Support
+Getting Help
+For technical support or assistance, contact the IT support team at support@sheikhplastic.com.
+
+This user manual provides an overview of the key features and functionalities of the Store Management System. For more detailed instructions, refer to the in-app help section or contact the support team. Thank you for using the Store Management System for Sheikh Plastic Industries (SPI)! 🚀
