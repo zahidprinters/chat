@@ -1,0 +1,59 @@
+Store Management System Setup Guide: Installation Instructions
+Prerequisites
+Before you begin, make sure you have the following installed on your development environment:
+
+VS Code: For coding and development.
+
+Git: For version control.
+
+Docker: For containerization.
+
+Composer: For managing PHP dependencies.
+
+XAMPP: For local development (Apache, MySQL, PHP).
+
+PHPUnit: For testing.
+
+Postman: For API testing.
+
+Step-by-Step Installation
+Step 1: Clone the Repository
+Open your terminal.
+
+Clone the repository from GitHub by using the command: git clone https://github.com/your-username/spi-store-management.git.
+
+Step 2: Set Up the Development Environment
+Navigate to the project directory by using the command: cd spi-store-management.
+
+Install dependencies using Composer by running the command: composer install.
+
+Set up your .env file by copying the .env.example file to .env and updating the database credentials and other environment variables as needed.
+
+Step 3: Set Up Docker (Optional)
+If you prefer using Docker for containerization, follow these steps:
+
+Build and run the Docker containers by using the command: docker-compose up --build.
+
+Step 4: Set Up XAMPP
+Install XAMPP on your local machine.
+
+Start Apache and MySQL services.
+
+Step 5: Set Up the Database
+Open phpMyAdmin and create a new database (e.g., spi_store).
+
+Run the database migrations by using the command: php artisan migrate.
+
+Step 6: Start the Development Server
+Start the Laravel development server by using the command: php artisan serve.
+
+Step 7: Access the Application
+Open your web browser and navigate to http://localhost:8000.
+
+Testing the Application
+Run the PHPUnit tests by using the command: phpunit.
+
+Additional Notes
+Ensure daily backups of the database to AWS S3 as mentioned in the project notes.
+
+Validate unit conversions and optimize database indexing for performance.
