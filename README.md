@@ -1,37 +1,105 @@
+# Finalized Main Decision Document: Store Management System for Sheikh Plastic Industries (SPI)
 
-Your project is a simple chat application built using PHP, HTML, and CSS. It allows users to engage in a real-time conversation by submitting messages and displaying them in a chat room format. Here's a summary of the key features and structure:
+## 1. Project Overview
+**Goal**:  
+To create a scalable, user-friendly store management system that streamlines inventory, order processing, and reporting for SPI, ensuring operational efficiency, reduced errors, and actionable insights.
 
-Key Features:
-User Authentication (Username):
+---
 
-A user can set their username once at the beginning. If not already set, the system prompts for a username input.
-Message Handling:
+## 2. Features and Requirements
+### Core Features
+**User Management**:
+- Secure authentication (MFA, password reset).
+- Role-based access control (Admin, Manager, Staff).
+- Audit logs and security alerts.
 
-Once the username is set, users can send messages which are stored in the session. Messages are displayed in the order they were received.
-Only the last 10 messages are shown in the chat, keeping the interface clean and concise.
-Message Display:
+**Inventory Management**:
+- Real-time stock tracking with **unit of measurement (UoM) conversions** (e.g., kg ↔ grams, liters ↔ milliliters).
+- Low-stock alerts and supplier integration.
+- Manual product search (no barcodes) with autocomplete and CSV bulk operations.
 
-Each message is displayed with the sender's username.
-Messages are styled to differentiate between the current user’s messages (aligned to the right) and others’ messages (aligned to the left).
-Session Management:
+**Order Processing**:
+- Order creation/status tracking (pending, completed).
+- Email/SMS notifications and return management.
 
-PHP sessions are used to store messages and user data.
-On logout, the session is destroyed, and the user is redirected to the starting page, prompting them for a username again.
-CSS Styling:
+**Reporting**:
+- Customizable reports (CSV/PDF) and real-time dashboards.
+- Sales analytics and predictive forecasting.
 
-The chat interface is clean, responsive, and styled to offer an intuitive experience.
-Messages are styled differently for the current user and other users to visually distinguish between them.
-The layout is centered with flexbox for responsiveness.
-Logout Functionality:
+---
 
-A Logout button allows the user to log out and clear their session. After logging out, they are redirected to the starting page.
-Technical Details:
-Frontend: HTML and CSS for the structure and style of the chat interface.
-Backend: PHP is used to manage session data, handle form submissions, and render the chat interface dynamically.
-Session Storage: Messages and username data are stored in PHP sessions, ensuring that the chat persists across requests but can be reset when the user logs out.
-Workflow:
-User visits the page and is asked to set their username if it's not already set.
-User sends a message after entering their username, and the message is displayed in the chat window.
-Messages are limited to the last 10 displayed, maintaining a clean UI.
-Logout clears the session, and the user is redirected to the username input page.
-This project provides a basic, functional chat application with simple session handling. Let me know if you'd like to expand any part of the functionality!
+## 3. Architecture & Technology Stack
+- **Frontend**: HTML/CSS, JavaScript, Bootstrap.
+- **Backend**: PHP, Laravel.
+- **Database**: MySQL.
+- **Server**: XAMPP (dev), AWS/DigitalOcean (prod).
+
+---
+
+## 4. Software Requirements
+- **Development**: VS Code, Git, Docker, Composer.
+- **Testing**: PHPUnit, Postman.
+
+---
+
+## 5. Project Structure
+```plaintext
+/spidatabas
+├── css/
+├── js/
+├── php/
+├── assets/
+├── views/
+├── routes/
+├── models/
+├── tests/
+└── database/
+
+---
+
+## 6. Database Structure
+**Tables**:
+- **users**: `id, username, password, role, email, ...`
+- **products**: `id, name, unit_id (FK), category_id, ...`
+- **inventory**: `id, product_id (FK), quantity, stock_threshold, ...`
+- **units**: `id, name (e.g., "Kilogram"), abbreviation (e.g., "kg")`
+- **product_unit_conversions**: `product_id (FK), from_unit_id (FK), to_unit_id (FK), conversion_factor`
+- **orders**, **suppliers**, **logs**, **notifications**, etc.
+
+---
+
+## 7. Key Exclusions
+- **Removed Features**: Barcode scanning, QR code labels, batch/expiry tracking.
+- **Rationale**: Simplified workflows to reduce complexity and maintenance.
+
+---
+
+## 8. Next Steps
+1. Implement UoM conversion UI (unit dropdowns, CSV templates).
+2. Update inventory/order forms to support unit selection.
+3. Write user guides for UoM management and reporting.
+4. Conduct staff training on unit conversions and manual product search.
+
+---
+
+## 9. Notes
+- **Validation**: Ensure units are compatible (e.g., no kg → liters).
+- **Performance**: Optimize database indexing for unit conversions.
+- **Backups**: Daily database backups to AWS S3.
+
+---
+
+## 10. Recent Updates
+- Added unit of measurement (UoM) conversion logic.
+- Removed barcode, QR code, and batch tracking features.
+- Finalized database schema and inventory workflows.
+
+---
+
+**Document Version**: 1.0  
+**Approved By**: [SPI Management/Stakeholder Name]  
+**Date**: [Insert Date]
+
+---
+
+This document reflects all finalized decisions, ensuring alignment with SPI’s operational needs. Let me know if further adjustments are required! 🚀
